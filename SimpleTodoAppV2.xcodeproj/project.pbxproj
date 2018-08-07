@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		11486A50211793B000C17BB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11486A4F211793B000C17BB9 /* AppDelegate.swift */; };
-		11486A52211793B000C17BB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11486A51211793B000C17BB9 /* ViewController.swift */; };
+		11486A52211793B000C17BB9 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11486A51211793B000C17BB9 /* IndexViewController.swift */; };
 		11486A55211793B000C17BB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11486A53211793B000C17BB9 /* Main.storyboard */; };
 		11486A57211793B100C17BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11486A56211793B100C17BB9 /* Assets.xcassets */; };
 		11486A5A211793B100C17BB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11486A58211793B100C17BB9 /* LaunchScreen.storyboard */; };
 		11486A65211793B100C17BB9 /* SimpleTodoAppV2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11486A64211793B100C17BB9 /* SimpleTodoAppV2Tests.swift */; };
 		11486A70211793B100C17BB9 /* SimpleTodoAppV2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11486A6F211793B100C17BB9 /* SimpleTodoAppV2UITests.swift */; };
+		11486A7E21179C8400C17BB9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11486A7D21179C8400C17BB9 /* DetailViewController.swift */; };
+		11486A8021179C9A00C17BB9 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11486A7F21179C9A00C17BB9 /* EditViewController.swift */; };
+		11486A822118B55300C17BB9 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11486A812118B55300C17BB9 /* TodoTableViewCell.swift */; };
+		11486A842118B76000C17BB9 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11486A832118B76000C17BB9 /* DateExtension.swift */; };
+		11486A862118CA1200C17BB9 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11486A852118CA1100C17BB9 /* Todo.swift */; };
+		11486A882118CB9900C17BB9 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11486A872118CB9900C17BB9 /* TodoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,7 @@
 /* Begin PBXFileReference section */
 		11486A4C211793B000C17BB9 /* SimpleTodoAppV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTodoAppV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11486A4F211793B000C17BB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11486A51211793B000C17BB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11486A51211793B000C17BB9 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		11486A54211793B000C17BB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11486A56211793B100C17BB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11486A59211793B100C17BB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		11486A6B211793B100C17BB9 /* SimpleTodoAppV2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTodoAppV2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11486A6F211793B100C17BB9 /* SimpleTodoAppV2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTodoAppV2UITests.swift; sourceTree = "<group>"; };
 		11486A71211793B100C17BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11486A7D21179C8400C17BB9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		11486A7F21179C9A00C17BB9 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		11486A812118B55300C17BB9 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
+		11486A832118B76000C17BB9 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		11486A852118CA1100C17BB9 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		11486A872118CB9900C17BB9 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +110,13 @@
 			isa = PBXGroup;
 			children = (
 				11486A4F211793B000C17BB9 /* AppDelegate.swift */,
-				11486A51211793B000C17BB9 /* ViewController.swift */,
+				11486A51211793B000C17BB9 /* IndexViewController.swift */,
+				11486A7D21179C8400C17BB9 /* DetailViewController.swift */,
+				11486A7F21179C9A00C17BB9 /* EditViewController.swift */,
+				11486A832118B76000C17BB9 /* DateExtension.swift */,
+				11486A812118B55300C17BB9 /* TodoTableViewCell.swift */,
+				11486A852118CA1100C17BB9 /* Todo.swift */,
+				11486A872118CB9900C17BB9 /* TodoModel.swift */,
 				11486A53211793B000C17BB9 /* Main.storyboard */,
 				11486A56211793B100C17BB9 /* Assets.xcassets */,
 				11486A58211793B100C17BB9 /* LaunchScreen.storyboard */,
@@ -256,7 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11486A52211793B000C17BB9 /* ViewController.swift in Sources */,
+				11486A862118CA1200C17BB9 /* Todo.swift in Sources */,
+				11486A8021179C9A00C17BB9 /* EditViewController.swift in Sources */,
+				11486A842118B76000C17BB9 /* DateExtension.swift in Sources */,
+				11486A7E21179C8400C17BB9 /* DetailViewController.swift in Sources */,
+				11486A52211793B000C17BB9 /* IndexViewController.swift in Sources */,
+				11486A882118CB9900C17BB9 /* TodoModel.swift in Sources */,
+				11486A822118B55300C17BB9 /* TodoTableViewCell.swift in Sources */,
 				11486A50211793B000C17BB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
