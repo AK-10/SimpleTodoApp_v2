@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class IndexViewController: UIViewController {
 
     @IBOutlet weak var todoTableView: UITableView!
     
     var todoModel = TodoModel()
-    var todos: [Todo] = []
+//    var todos: [Todo] = []
+    var todos: Results<Todo>!
     deinit {
         print("\(self) was deinited")
     }
@@ -50,6 +52,9 @@ class IndexViewController: UIViewController {
         navigationController?.isToolbarHidden = true
         todoModel.read(completion: { tds in
             self.todos = tds
+            if self.todos.count > 0 {
+                print(type(of: self.todos[0]))
+            }
         })
         todoTableView.reloadData()
     }

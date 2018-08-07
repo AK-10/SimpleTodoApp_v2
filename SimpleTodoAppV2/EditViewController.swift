@@ -53,6 +53,7 @@ class EditViewController: UIViewController {
             navigationbar.topItem?.title = "編集"
             titleTextField.text = todo?.title
             dateLabel.text = todo?.date.toStringJP()
+            datePicker.date = todo?.date ?? Date()
             memoTextView.text = todo?.memo ?? "nil"
         }
     }
@@ -75,7 +76,6 @@ class EditViewController: UIViewController {
                     indexVC.updateUI()
                 })
             case .update:
-                print(todoModel)
                 todoModel?.update(id: (todo?.id)!, t: titleTextField.text!, d: datePicker.date, m: memoTextView.text, completion: { td in
                     let navigationVC = self.presentingViewController as! UINavigationController
                     let detailVC = navigationVC.topViewController as! DetailViewController

@@ -7,18 +7,24 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Todo {
-    var id: Int
-    var title: String
-    var date: Date
-    var memo: String
+final class Todo: Object {
+    @objc dynamic var id: Int = -1
+    @objc dynamic var title: String = ""
+    @objc dynamic var date: Date = Date()
+    @objc dynamic var memo: String = ""
     
-    init(_ i: Int, _ t: String, _ d: Date, _ m: String) {
-        id = i
-        title = t
-        date = d
-        memo = m
-        print(id)
+//    convenience init(_ i: Int, _ t: String, _ d: Date, _ m: String) {
+//        self.init()
+//        id = i
+//        title = t
+//        date = d
+//        memo = m
+//    }
+    
+    //primaryKeyを定義
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }
