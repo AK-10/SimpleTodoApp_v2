@@ -15,14 +15,6 @@ final class Todo: Object {
     @objc dynamic var date: Date = Date()
     @objc dynamic var memo: String = ""
     
-//    convenience init(_ i: Int, _ t: String, _ d: Date, _ m: String) {
-//        self.init()
-//        id = i
-//        title = t
-//        date = d
-//        memo = m
-//    }
-    
     //primaryKeyを定義
     override static func primaryKey() -> String? {
         return "id"
