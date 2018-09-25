@@ -21,8 +21,7 @@ class EditViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var memoTextView: UITextView!
     
-    var todo: Todo? = nil
-    var todoModel: TodoModel? = nil
+    var todo: TodoEntity? = nil
     var style: ViewStyle = .create
     
     deinit {
@@ -70,13 +69,13 @@ class EditViewController: UIViewController {
         guard titleTextField.text == "" else {
             switch style {
             case .create:
-                todoModel?.create(t: titleTextField.text!, d: datePicker.date, m: memoTextView.text, completion: { _ in
+                TodoModel.create(t: titleTextField.text!, d: datePicker.date, m: memoTextView.text, completion: { _ in
                     let navigationVC = self.presentingViewController as! UINavigationController
                     let indexVC = navigationVC.viewControllers[0] as! IndexViewController
                     indexVC.updateUI()
                 })
             case .update:
-                todoModel?.update(id: (todo?.id)!, t: titleTextField.text!, d: datePicker.date, m: memoTextView.text, completion: { td in
+                TodoModel.update(id: (todo?.id)!, t: titleTextField.text!, d: datePicker.date, m: memoTextView.text, completion: { td in
                     let navigationVC = self.presentingViewController as! UINavigationController
                     let detailVC = navigationVC.topViewController as! DetailViewController
                     detailVC.todo = td

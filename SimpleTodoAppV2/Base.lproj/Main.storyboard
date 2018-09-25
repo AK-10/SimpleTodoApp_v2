@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KdM-Oo-9Ea">
-    <device id="retina5_9" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KdM-Oo-9Ea">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,28 +15,28 @@
             <objects>
                 <viewController storyboardIdentifier="index" id="BYZ-38-t0r" customClass="IndexViewController" customModule="SimpleTodoAppV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jdI-ZH-zKk">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="todoCell" rowHeight="47" id="Nvg-eE-bfD" customClass="TodoTableViewCell" customModule="SimpleTodoAppV2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="47"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nvg-eE-bfD" id="xnQ-6b-xe6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="46.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="鬼退治に行く" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdz-Io-qPd">
-                                                    <rect key="frame" x="15" y="13" width="213" height="21"/>
+                                                    <rect key="frame" x="20" y="13" width="242" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018年2月13日" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwF-WY-lP2">
-                                                    <rect key="frame" x="244" y="15.666666666666664" width="116" height="17"/>
+                                                    <rect key="frame" x="278" y="15" width="116" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="116" id="Ce0-ny-fJx"/>
                                                     </constraints>
@@ -81,7 +80,7 @@
                     <connections>
                         <outlet property="todoTableView" destination="jdI-ZH-zKk" id="qD6-GP-3IR"/>
                         <segue destination="20V-UI-TD1" kind="show" identifier="toDetail" id="dA7-a8-3qv"/>
-                        <segue destination="z4j-D1-ZH6" kind="presentation" identifier="toEdit" id="g4v-no-BJF"/>
+                        <segue destination="z4j-D1-ZH6" kind="presentation" identifier="toCreate" id="g4v-no-BJF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -91,13 +90,13 @@
         <!--Edit View Controller-->
         <scene sceneID="8ya-YB-7sU">
             <objects>
-                <viewController storyboardIdentifier="edit" id="z4j-D1-ZH6" customClass="EditViewController" customModule="SimpleTodoAppV2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="create&amp;edit" id="z4j-D1-ZH6" customClass="EditViewController" customModule="SimpleTodoAppV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HUg-ev-wxO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfG-Bb-8FM">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="cMA-ke-yoL">
                                         <barButtonItem key="leftBarButtonItem" title="キャンセル" id="Kga-yC-aPX">
@@ -114,10 +113,10 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dtk-ZI-Wxt">
-                                <rect key="frame" x="0.0" y="112" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="112" width="414" height="40"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="鬼退治に行く" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="67b-yc-GuT">
-                                        <rect key="frame" x="16" y="10" width="343" height="20"/>
+                                        <rect key="frame" x="16" y="10" width="382" height="20"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -132,16 +131,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rh9-xb-iC7">
-                                <rect key="frame" x="0.0" y="192" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="192" width="414" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="期日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pps-GK-hKS">
-                                        <rect key="frame" x="16" y="10" width="35" height="21"/>
+                                        <rect key="frame" x="16" y="9.6666666666666572" width="35" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018年2月13日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85W-dv-M1e">
-                                        <rect key="frame" x="241" y="10" width="118" height="21"/>
+                                        <rect key="frame" x="280" y="9.6666666666666572" width="118" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -157,10 +156,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izm-7x-bOS">
-                                <rect key="frame" x="0.0" y="411" width="375" height="180"/>
+                                <rect key="frame" x="0.0" y="411" width="414" height="180"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eKb-nI-3sI">
-                                        <rect key="frame" x="16" y="8" width="343" height="164"/>
+                                        <rect key="frame" x="16" y="8" width="382" height="164"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -183,10 +182,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbw-pg-7ad">
-                                <rect key="frame" x="0.0" y="232" width="375" height="140"/>
+                                <rect key="frame" x="0.0" y="232" width="414" height="140"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hPK-7z-3aY">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                         <date key="date" timeIntervalSinceReferenceDate="555197861.46565604">
                                             <!--2018-08-05 21:37:41 +0000-->
                                         </date>
@@ -247,7 +246,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KdM-Oo-9Ea" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yKD-CB-f9x">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -267,11 +266,11 @@
             <objects>
                 <viewController storyboardIdentifier="detail" id="20V-UI-TD1" customClass="DetailViewController" customModule="SimpleTodoAppV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lct-jF-v3m">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="鬼退治に行く" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiB-sa-bSw">
-                                <rect key="frame" x="16" y="128" width="343" height="32"/>
+                                <rect key="frame" x="16" y="128" width="382" height="32"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -292,7 +291,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bc8-2c-zhK">
-                                <rect key="frame" x="16" y="244.66666666666666" width="343" height="444.33333333333337"/>
+                                <rect key="frame" x="16" y="244.66666666666669" width="382" height="528.33333333333326"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -333,7 +332,7 @@
                         <outlet property="dateLabel" destination="E6V-zA-Rft" id="YII-7R-gLY"/>
                         <outlet property="memoTextView" destination="bc8-2c-zhK" id="yeO-n1-9uF"/>
                         <outlet property="titleLabel" destination="tiB-sa-bSw" id="lLJ-AG-34M"/>
-                        <segue destination="z4j-D1-ZH6" kind="presentation" id="ezx-4R-QyU"/>
+                        <segue destination="z4j-D1-ZH6" kind="presentation" identifier="toEdit" id="ezx-4R-QyU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeC-bz-PGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -342,6 +341,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ezx-4R-QyU"/>
+        <segue reference="g4v-no-BJF"/>
     </inferredMetricsTieBreakers>
 </document>

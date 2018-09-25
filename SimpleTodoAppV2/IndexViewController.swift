@@ -12,10 +12,8 @@ import RealmSwift
 class IndexViewController: UIViewController {
 
     @IBOutlet weak var todoTableView: UITableView!
-    
-    var todoModel = TodoModel()
 //    var todos: [Todo] = []
-    var todos: Results<Todo>!
+    var todos: Results<TodoEntity>!
     deinit {
         print("\(self) was deinited")
     }
@@ -33,28 +31,24 @@ class IndexViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        updateUI()
     }
     
     func setup() {
         todoTableView.delegate = self
         todoTableView.dataSource = self
-        updateUI()
     }
     
     @IBAction func toCreateView(_ sender: Any) {
-        let createVC = self.storyboard?.instantiateViewController(withIdentifier: "edit") as! EditViewController
+        let createVC = self.storyboard?.instantiateViewController(withIdentifier: "create&edit") as! EditViewController
         createVC.style = .create
-        createVC.todoModel = self.todoModel
         present(createVC, animated: true, completion: nil)
     }
     
     func updateUI() {
         navigationController?.isToolbarHidden = true
-        todoModel.read(completion: { tds in
+        TodoModel.read(completion: { tds in
             self.todos = tds
-            if self.todos.count > 0 {
-                print(type(of: self.todos[0]))
-            }
         })
         todoTableView.reloadData()
     }
@@ -74,7 +68,6 @@ extension IndexViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = storyboard?.instantiateViewController(withIdentifier: "detail") as! DetailViewController
         detailVC.todo = todos[indexPath.item]
-        detailVC.todoModel = self.todoModel
         navigationController?.pushViewController(detailVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }

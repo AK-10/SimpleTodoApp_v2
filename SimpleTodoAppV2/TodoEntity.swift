@@ -9,13 +9,13 @@
 import Foundation
 import RealmSwift
 
-final class Todo: Object {
+final class TodoEntity: Object {
     @objc dynamic var id: Int = -1
     @objc dynamic var title: String = ""
     @objc dynamic var date: Date = Date()
     @objc dynamic var memo: String = ""
     
-    //primaryKeyを定義
+    //primaryKeyを設定
     override static func primaryKey() -> String? {
         return "id"
     }

@@ -14,8 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var memoTextView: UITextView!
     
-    var todo: Todo? = nil
-    var todoModel: TodoModel? = nil
+    var todo: TodoEntity? = nil
     
     deinit {
         print("\(self) was deinited")
@@ -39,15 +38,14 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func editAction(_ sender: Any) {
-        let updateVC = storyboard?.instantiateViewController(withIdentifier: "edit") as! EditViewController
+        let updateVC = storyboard?.instantiateViewController(withIdentifier: "create&edit") as! EditViewController
         updateVC.style = .update
         updateVC.todo = todo
-        updateVC.todoModel = todoModel
         present(updateVC, animated: true, completion: nil)
     }
     
     @IBAction func deleteAction(_ sender: Any) {
-        todoModel?.delete(id: (todo?.id)!, completion: { _ in
+        TodoModel.delete(id: (todo?.id)!, completion: { _ in
             print("delete was tapped")
             let indexVC = self.navigationController?.viewControllers[0] as! IndexViewController
             indexVC.updateUI()
