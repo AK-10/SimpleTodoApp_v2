@@ -39,7 +39,7 @@ class TodoModel {
     
     class func update(id: Int, t: String, d: Date, m: String, completion: @escaping (TodoEntity?) -> Void){
         let realm = try! Realm()
-        guard let todo = realm.objects(TodoEntity.self).first(where: {$0.id == id}) else { completion(nil); return }
+        guard let todo = realm.objects(TodoEntity.self).first(where: {$0.id == id}) else {  return }
         try! realm.write {
             todo.title = t
             todo.date = d
